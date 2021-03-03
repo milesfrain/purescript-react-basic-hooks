@@ -129,8 +129,8 @@ unsafeRenderEffect = Render
 
 -- | Type alias used to lift otherwise pure functionality into the Render type.
 -- | Not commonly used.
-type Pure a
-  = forall hooks. Render hooks hooks a
+type Pure (a :: Type)
+  = forall (hooks :: Type). Render hooks hooks a
 
 -- | Type alias for Render representing a hook.
 -- |
